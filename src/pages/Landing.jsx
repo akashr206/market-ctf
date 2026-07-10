@@ -55,7 +55,7 @@ const Landing = () => {
                         GDG CTF
                     </span>
                 </div>
-                <div className="hidden md:flex items-center gap-8 text-sm font-medium text-zinc-400">
+                <div className="flex items-center gap-8 text-sm font-medium text-zinc-400">
                     <Button
                         variant="outline"
                         className="border-fuchsia-500/50 relative hover:text-fuchsia-400/80 text-fuchsia-400 hover:bg-fuchsia-500/10"
@@ -71,7 +71,7 @@ const Landing = () => {
             </motion.nav>
 
             {/* Hero Section */}
-            <section className="relative h-screen flex flex-col items-center min-h-[85vh] text-center px-4 pt-20">
+            <section className="relative min-h-[90vh] flex flex-col items-center justify-center text-center px-4 py-16 md:py-24">
                 <motion.div
                     className="max-w-4xl mx-auto flex flex-col items-center gap-8"
                     variants={containerVariants}
@@ -148,20 +148,21 @@ const Landing = () => {
             </section>
 
             {/* Poster & Registration Section */}
-            <section id="register" className="mx-10">
-                <div className="flex">
+            <section id="register" className="max-w-7xl mx-auto px-6 md:px-12 py-16 md:py-24">
+                <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center justify-center">
                     {/* Left: Poster */}
                     <motion.div
                         initial={{ opacity: 0, x: -40 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.8 }}
-                        className="relative group flex-1"
+                        className="relative group flex-1 w-full max-w-lg lg:max-w-none"
                     >
+                        <div className="absolute -inset-1 bg-gradient-to-r from-fuchsia-600 to-purple-600 rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-1000" />
                         <img
                             src="/poster.jpeg"
                             alt="GDG CTF Poster"
-                            className="relative border border-white/10 shadow-2xl shadow-fuchsia-900/20 object-cover"
+                            className="relative w-full h-auto rounded-2xl border border-white/10 shadow-2xl shadow-fuchsia-900/20 object-cover"
                         />
                     </motion.div>
 
@@ -171,7 +172,7 @@ const Landing = () => {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.8 }}
-                        className="flex flex-col flex-1 items-center justify-center gap-8"
+                        className="flex flex-col flex-1 items-center lg:items-start justify-center gap-8 text-center lg:text-left"
                     >
                         <div className="max-w-lg flex flex-col gap-4">
                             <div>
@@ -205,7 +206,7 @@ const Landing = () => {
 
                             <Button
                                 size="lg"
-                                className="w-full sm:w-auto self-start bg-white text-black hover:bg-zinc-200 text-lg h-14 px-8 rounded-xl group relative"
+                                className="w-full sm:w-auto self-center lg:self-start bg-white text-black hover:bg-zinc-200 text-lg h-14 px-8 rounded-xl group relative"
                             >
                                 <a
                                     href="https://tinyurl.com/2dv468uh"
