@@ -1,0 +1,15 @@
+/*
+Nice! You found the stylesheet.
+Looks can be deceiving.
+Scripts often tell the real story.
+Next: main.js
+*/
+
+:root {
+  --primary-glow: rgba(0, 255, 170, 0.4);
+}
+
+::selection {
+  background: rgba(0, 255, 170, 0.3);
+  color: #fff;
+}
