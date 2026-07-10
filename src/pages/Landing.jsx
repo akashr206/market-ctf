@@ -119,36 +119,22 @@ const Landing = () => {
                                 <span>Found the hidden flag?</span>
                             </div>
                             <p className="text-sm text-zinc-400 text-left">
-                                Find and submit the flag to unlock exclusive
-                                registration perks.
+                                Find and submit the flag to get a shoutout on
+                                our Instagram page.{" "}
+                                <span className="text-fuchsia-500">
+                                    HINT: INSPECT IS THE KEY
+                                </span>
                             </p>
-
-                            <form
-                                onSubmit={handleFlagSubmit}
-                                className="flex gap-2"
-                            >
-                                <Input
-                                    value={flagInput}
-                                    onChange={(e) =>
-                                        setFlagInput(e.target.value)
-                                    }
-                                    placeholder="ctf{...}"
-                                    className="bg-zinc-900/50 border-zinc-800 text-white placeholder:text-zinc-600 focus-visible:ring-fuchsia-500"
-                                />
-                                <Button
-                                    type="submit"
-                                    className="bg-fuchsia-600 hover:bg-fuchsia-700 text-white"
-                                >
-                                    Submit
-                                </Button>
-                            </form>
                         </div>
                     </motion.div>
                 </motion.div>
             </section>
 
             {/* Poster & Registration Section */}
-            <section id="register" className="max-w-7xl mx-auto px-6 md:px-12 py-16 md:py-24">
+            <section
+                id="register"
+                className="max-w-7xl mx-auto px-6 md:px-12 py-16 md:py-24"
+            >
                 <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center justify-center">
                     {/* Left: Poster */}
                     <motion.div
@@ -224,7 +210,6 @@ const Landing = () => {
             {/* Footer */}
             <footer className="max-w-7xl mx-auto px-6 py-8 border-t border-white/10 mt-20 flex flex-col md:flex-row justify-between items-center gap-4 text-zinc-200 text-sm font-mono">
                 <div>© GDG UVCE 2026</div>
-                <div>INSPECT IS THE KEY</div>
                 <div className="flex gap-3 items-center">
                     <span>Credits: Akash</span>
                     <Button
